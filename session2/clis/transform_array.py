@@ -5,7 +5,7 @@ import numpy as np
 parser = argparse.ArgumentParser('CSV I/O Path')
 parser.add_argument('input_array_path', type=str, help='Path to input npy file')
 parser.add_argument('output_array_path', type=str, help='Path to output npy file')
-parser.add_argument('transform', type=str, choices=["norm", "std"], help='Normalize (norm) or standardize (std)')
+parser.add_argument('--transform', type=str, default='std', choices=["norm", "std"], help='Normalize (norm) or standardize (std)')
 args = parser.parse_args()
 
 if args.transform == 'norm':
